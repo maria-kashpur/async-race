@@ -1,0 +1,111 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to right,
+    #f09819 0%,
+    #edde5d 51%,
+    #f09819 100%
+  );
+  background-size: 200% auto;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 10px 10px;
+  box-shadow: 0 0 6px #eee;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  color: #000000;
+  cursor: pointer;
+
+  &:disabled {
+    pointer-events: none;
+    cursor: none;
+    box-shadow: none;
+  }
+
+  &:hover {
+    background-position: right center;
+  }
+}
+button,
+input,
+.update__data {
+  &:disabled,
+  &:disabled:hover {
+    pointer-events: none;
+    cursor: none;
+    box-shadow: none;
+  }
+}
+
+.btn-main {
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1);
+  }
+  &.btn-block {
+    background: linear-gradient(
+      to right,
+      #f09819 0%,
+      #edde5d 51%,
+      #f09819 100%
+    );
+    text-decoration: underline;
+    color: #000000;
+  }
+}
+
+.btn-options {
+  background-image: linear-gradient(
+    to right,
+    #f09819 0%,
+    #fff56f 59%,
+    #19f025 100%
+  );
+  padding: 10px;
+  text-transform: uppercase;
+  display: block;
+  max-width: 100%;
+  border-bottom: #000000 solid 1px;
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.btn-control {
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-image: none;
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
+  &:active {
+    transform: scale(0.9);
+  }
+  &.btn-block {
+    background: transparent;
+    pointer-events: none;
+  }
+}
+
+.btn-pagination {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.btn-block {
+  background: #808080;
+  pointer-events: none;
+  color: #434040;
+}

@@ -1,0 +1,39 @@
+.header__icon {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  display: inline;
+  background: linear-gradient(to right, #f09819 0%, #edde5d 51%, #f09819 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav__box {
+  display: flex;
+  gap: 10px;
+}
+
+.header,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px auto;
+  flex-wrap: wrap;
+  color: #000000;
+}
+
+.github,
+.rsschool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

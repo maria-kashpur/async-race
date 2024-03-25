@@ -1,0 +1,34 @@
+{
+  "name": "async-race",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "server": "node ./server/index.cjs",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint:style": "eslint --fix main.js",
+    "lint:formatting": "prettier --write main.js",
+    "lint": "npm run lint:style && lint:formatting"
+  },
+  "devDependencies": {
+    "@types/json-server": "^0.14.7",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^43.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.6",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}

@@ -1,0 +1,82 @@
+.winners__table {
+  border-radius: 10px;
+  overflow: auto;
+  grid-template-columns: repeat(5, min-content);
+  font-size: 12px;
+  min-width: 100%;
+
+  th {
+    background: #ecd053;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    padding-left: 30px;
+  }
+}
+
+.filter {
+  &.ASC::after {
+    content: "↓";
+    margin: 0.5em;
+    font-size: 0.7em;
+  }
+  &::after {
+    content: "↑";
+    margin: 0.5em;
+    font-size: 0.7em;
+  }
+}
+
+table {
+  min-width: 100%;
+  display: grid;
+  border-collapse: collapse;
+}
+
+thead,
+tbody,
+tr {
+  display: contents;
+}
+
+th,
+td {
+  padding: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  text-align: left;
+  &:first-of-type {
+    border-radius: 10px 0 0 0;
+  }
+  &:last-of-type {
+    border-radius: 0 10px 0 0;
+  }
+}
+
+td {
+  &:first-of-type {
+    border-radius: 0 0 0 10px;
+  }
+  &:last-of-type {
+    border-radius: 0 0 10px 0;
+  }
+}
+
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+tr:nth-child(even) td {
+  background: rgb(60, 60, 60);
+}
+
+.winners_car .car {
+  min-width: 50px;
+}

@@ -1,0 +1,182 @@
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100%;
+  padding-bottom: 10px;
+  border-bottom: #000000 solid 3px;
+  margin-bottom: 10px;
+}
+
+.options__create,
+.options__update {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  max-width: 100%;
+  position: relative;
+}
+
+.create__data,
+.update__data {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0 4px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+  box-sizing: border-box;
+  max-width: 100%;
+  flex-shrink: 1;
+  row-gap: 10px;
+  &:hover {
+    box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.update__data {
+  width: 200px;
+  flex-shrink: 0;
+  &.unactive {
+    display: flex;
+  }
+}
+
+.options__text {
+  width: 190px;
+  padding: 0 6px;
+  font-size: inherit;
+  max-width: calc(100% - 20px);
+  border: transparent solid 1px;
+  &:invalid {
+    border: red solid 1px;
+  }
+}
+
+.options__color {
+  appearance: none;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  &::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  &::-webkit-color-swatch {
+    border-radius: 50%;
+    border: none;
+  }
+}
+
+.options__race {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 10px;
+}
+
+.cars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &.racing {
+    transition: opacity ease 0.5s;
+    .update__data,
+    .control__col {
+      opacity: 0;
+      transition: opacity ease 0.3s;
+      pointer-events: none;
+    }
+  }
+}
+
+.car__box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 2px solid rgb(48, 48, 48);
+  overflow: hidden;
+  border-radius: 10px 10px;
+}
+
+.car__control {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(63, 62, 62);
+  padding: 10px;
+}
+
+.control__col {
+  display: flex;
+  gap: 10px;
+}
+
+.car {
+  width: 20%;
+  position: relative;
+  z-index: 2;
+  left: 0%;
+}
+
+.car__track {
+  background-color: black;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 20%;
+    height: 100%;
+    transform: skewX(303deg);
+    z-index: 1;
+    width: 15px;
+    background: repeating-conic-gradient(from 0deg, #000 0% 25%, #fff 0% 50%)
+      50%/10px 10px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 8px;
+    right: 0;
+    height: 2px;
+    background-image: repeating-linear-gradient(
+      338deg,
+      transparent 0 10px,
+      #ffffff 10px 20px
+    );
+    z-index: 1;
+  }
+}
+
+.race_status {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(41, 38, 38);
+  border-radius: 10px 10px;
+  border: #000 2px solid;
+  box-shadow: 0 0 6px #eee;
+  transition: left 0.3s linear;
+  padding-left: 15px;
+  color: red;
+  font-size: 2em;
+  left: -200%;
+  &.racing {
+    left: 0%;
+  }
+}
+
+.hidden {
+  display: none;
+}
